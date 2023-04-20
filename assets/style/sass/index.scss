@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
+
+// Varriáveis
+$main-font: 'Public Sans', sans-serif;
+    // Primary colors
+$primary-font-color: hsl(233, 26%, 24%);
+$secundary-font-color: hsl(233, 8%, 62%);
+$button-font-color: hsl(220, 16%, 96%);
+$gradient: linear-gradient(90deg, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+    // Neutral colors
+$light-gray: hsl(0, 0%, 98%);
+$body-background: hsl(0, 0%, 100%);
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: $body-background;
+    font-family: $main-font;
+}
+
+header {
+    position: relative;
+}
+
+// Start navbar
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 1rem;
+
+    .navbar__logo {
+        width: auto;
+    }
+
+    .menu-desktop {
+        display: none;
+    }
+
+    .navbar__desktop-button {
+        display: none;
+    }
+
+    .navbar__mobile-button {
+        padding: 0.6rem 1.2rem;
+        background: none;
+        border: none;
+        background-image: url("/assets/img/icon-hamburger.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.menu-mobile {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    width: 90%;
+    margin: 1.5rem 0;
+    padding: 2rem;
+    background: $body-background;
+    border-radius: 4px;
+    // Desabilitador
+    display: none;
+
+    a {
+        color: $primary-font-color;
+        text-decoration: none;
+    }
+}
+// End navbar
+
+// Start initial section
+.initial-section {
+    height: 110vh;
+    color: $primary-font-color;
+    text-align: center;
+    padding-bottom: 2rem;
+
+    .initial-section__banner {
+        width: 100%;
+        height: 50%;
+        background-image: 
+            url("/assets/img/image-mockups.png"),
+            url("/assets/img/bg-intro-mobile.svg");
+        background-repeat: no-repeat;
+        background-size: 90%, cover;
+        background-position: center, left top;
+        background-position-y: -120px, -70px;
+    }
+    
+    h2 {
+        font-size: 2.3rem;
+        line-height: 2.9rem;
+    }
+
+    p {
+        font-size: 15px;
+        color: $secundary-font-color;
+        line-height: 1.5rem;
+        margin: 1rem 1rem 2rem;
+    }
+
+    button {
+        padding: 1rem 2rem;
+        border-radius: 25px;
+        border: none;
+        background: $gradient;
+        color: $button-font-color;
+        font-weight: 700;
+    }
+}
+
+// End initial section
