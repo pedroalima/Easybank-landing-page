@@ -26,8 +26,9 @@ Os usuários devem ser capazes de:
 ### Screenshots
 
 <html>
-  <!-- <h4>Layout mobile tema padrão</h4>
-  <img src="./assets/img/" width="300px">
+  <h4>Progresso atual</h4>
+  <img src="./assets/img/progresso.png" width="300px">
+  <!-- 
   <h4>Layout mobile tema claro</h4>
   <img src="./assets/img/" width="300px">
   <h4>Layout desktop tema padrão</h4>
@@ -35,7 +36,8 @@ Os usuários devem ser capazes de:
   <h4>Layout desktop tema claro</h4>
   <img src="./assets/img/" width="920px">
   <h1>Testando funcionalidades</h1>
-  <img src="./assets/img/" width="920px"> -->
+  <img src="./assets/img/" width="920px"> 
+  -->
 </html>
 
 ## Resultado: [Veja como ficou!](https://todo-list-pedroalima.vercel.app/)
@@ -43,21 +45,22 @@ Os usuários devem ser capazes de:
 ## Minha caminhada
 
 1º dia
-- [ ] Planejamento
-- [ ] Preparativos em mobile first
+- [x] Planejamento
+- [x] Preparativos em mobile first
 
 2º dia
-- [ ] Barra de navegação
+- [x] Barra de navegação
+- [x] Seção principal
 
 3º dia
-- [ ] Seção principal
+- [ ] Feature menu mobile
+- [ ] Seção vantagens
 
 4º dia
-- [ ] Seção vantagens
 - [ ] Seção ultimos artigos
+- [ ] rodapé
 
 5º dia
-- [ ] rodapé
 - [ ] Layout desktop
 
 6º dia
