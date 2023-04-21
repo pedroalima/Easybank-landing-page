@@ -27,6 +27,7 @@ Os usuários devem ser capazes de:
 
 <html>
   <h4>Progresso atual</h4>
+  <img src="./assets/img/menu.png" width="300px">
   <img src="./assets/img/progresso.png" width="300px">
   <!-- 
   <h4>Layout mobile tema claro</h4>
@@ -53,8 +54,8 @@ Os usuários devem ser capazes de:
 - [x] Seção principal
 
 3º dia
-- [ ] Feature menu mobile
-- [ ] Seção vantagens
+- [x] Feature menu mobile
+- [x] Seção vantagens
 
 4º dia
 - [ ] Seção ultimos artigos
