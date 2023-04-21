@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/style/css/reset.css">
     <link rel="stylesheet" href="/assets/style/css/index.css">
+    <script src="/assets/script/index.js" defer></script>
     <title>Easybank landing page</title>
 </head>
 <body>
@@ -20,10 +20,10 @@
                 <a href="#">Careers</a>
             </div>
             <button class="navbar__desktop-button">Request Invite</button>
-            <button class="navbar__mobile-button"></button>
+            <button class="navbar__mobile-button" id="mobileButton"></button>
         </nav>
 
-        <nav class="menu-mobile">
+        <nav class="menu-mobile hide" id="mobileMenu">
             <a href="#">Home</a>
             <a href="#">About</a>
             <a href="#">Contact</a>
@@ -31,6 +31,8 @@
             <a href="#">Careers</a>
         </nav>
     </header>
+
+    <div class="fade hide" id="fade"></div>
 
     <main>
         <section class="initial-section">

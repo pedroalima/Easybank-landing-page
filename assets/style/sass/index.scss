@@ -18,10 +18,19 @@ $body-background: hsl(0, 0%, 100%);
 body {
     background: $body-background;
     font-family: $main-font;
-}
+    z-index: 0;
 
-header {
-    position: relative;
+    header {
+        position: relative;
+    }
+
+    .fade {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: rgba(0, 0, 97, 0.3);
+        z-index: 1;
+    }
 }
 
 // Start navbar
@@ -51,6 +60,10 @@ header {
         background-repeat: no-repeat;
         background-position: center;
     }
+
+    .navbar__mobile-button--close {
+        background-image: url("/assets/img/icon-close.svg");
+    }
 }
 
 .menu-mobile {
@@ -67,33 +80,32 @@ header {
     padding: 2rem;
     background: $body-background;
     border-radius: 4px;
-    // Desabilitador
-    display: none;
+    z-index: 2;
 
     a {
         color: $primary-font-color;
         text-decoration: none;
+        font-size: 18px;
     }
 }
 // End navbar
 
 // Start initial section
 .initial-section {
-    height: 110vh;
     color: $primary-font-color;
     text-align: center;
-    padding-bottom: 2rem;
+    padding-bottom: 3rem;
 
     .initial-section__banner {
         width: 100%;
-        height: 50%;
+        height: 53vh;
         background-image: 
             url("/assets/img/image-mockups.png"),
             url("/assets/img/bg-intro-mobile.svg");
         background-repeat: no-repeat;
         background-size: 90%, cover;
         background-position: center, left top;
-        background-position-y: -120px, -70px;
+        background-position-y: -21.5vh, -12.5vh;
     }
     
     h2 {
@@ -117,5 +129,8 @@ header {
         font-weight: 700;
     }
 }
-
 // End initial section
+
+.hide {
+    display: none;
+}
