@@ -5,10 +5,11 @@ $main-font: 'Public Sans', sans-serif;
     // Primary colors
 $primary-font-color: hsl(233, 26%, 24%);
 $secundary-font-color: hsl(233, 8%, 62%);
-$button-font-color: hsl(220, 16%, 96%);
+$button-font-color: rgba(243, 244, 246, 0.95);
 $gradient: linear-gradient(90deg, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+$gradient-fade: linear-gradient(rgba(52, 52, 92, 1), rgba(25, 25, 46, 0.1));
     // Neutral colors
-$light-gray: hsl(0, 0%, 98%);
+$section-background: hsl(0, 0%, 98%);
 $body-background: hsl(0, 0%, 100%);
 
 * {
@@ -28,7 +29,7 @@ body {
         width: 100%;
         height: 100%;
         position: absolute;
-        background: rgba(0, 0, 97, 0.3);
+        background: $gradient-fade;
         z-index: 1;
     }
 }
@@ -75,7 +76,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 1.5rem;
-    width: 90%;
+    width: 88%;
     margin: 1.5rem 0;
     padding: 2rem;
     background: $body-background;
@@ -85,20 +86,20 @@ body {
     a {
         color: $primary-font-color;
         text-decoration: none;
-        font-size: 18px;
+        font-size: 1.2rem;
     }
 }
 // End navbar
 
 // Start initial section
-.initial-section {
+.initial {
     color: $primary-font-color;
     text-align: center;
-    padding-bottom: 3rem;
+    padding-bottom: 5rem;
 
-    .initial-section__banner {
+    .initial__banner {
         width: 100%;
-        height: 53vh;
+        height: 56vh;
         background-image: 
             url("/assets/img/image-mockups.png"),
             url("/assets/img/bg-intro-mobile.svg");
@@ -108,28 +109,74 @@ body {
         background-position-y: -21.5vh, -12.5vh;
     }
     
-    h2 {
+    .initial__title {
         font-size: 2.3rem;
         line-height: 2.9rem;
     }
 
-    p {
-        font-size: 15px;
+    .initial__description {
+        font-size: 0.9rem;
         color: $secundary-font-color;
         line-height: 1.5rem;
         margin: 1rem 1rem 2rem;
     }
 
-    button {
-        padding: 1rem 2rem;
+    .button {
+        padding: 0.9rem 2.2rem;
         border-radius: 25px;
         border: none;
         background: $gradient;
+        font-size: 0.8rem;
         color: $button-font-color;
         font-weight: 700;
+        letter-spacing: 0.05rem;
     }
 }
 // End initial section
+
+// Start benefits section
+.benefits {
+    background: $section-background;
+    text-align: center;
+    padding: 3rem 0;
+
+    .benefits__title {
+        font-size: 2rem;
+        margin: 0 2rem;
+        color: $primary-font-color;
+        line-height: 2.3rem;
+    }
+
+    .benefits__description {
+        font-size: 0.9rem;
+        margin: 1.5rem 1.2rem 2.5rem;
+        color: $secundary-font-color;
+        line-height: 1.5rem;
+    }
+
+    .benefits__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 42vh;
+        margin-bottom: 1rem;
+
+        .benefits__item-title {
+            font-size: 1.25rem;
+            color: $primary-font-color;
+        }
+
+        .benefits__item-description {
+            font-size: 0.9rem;
+            margin: 0 1.2rem;
+            color: $secundary-font-color;
+            line-height: 1.5rem;
+        }
+    }
+    
+}
+// End benefits section
 
 .hide {
     display: none;
