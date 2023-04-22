@@ -58,10 +58,10 @@ Os usuários devem ser capazes de:
 - [x] Seção vantagens
 
 4º dia
-- [ ] Seção ultimos artigos
-- [ ] rodapé
+- [x] Seção ultimos artigos
 
 5º dia
+- [ ] rodapé
 - [ ] Layout desktop
 
 6º dia
