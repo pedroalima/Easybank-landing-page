@@ -8,7 +8,7 @@ const showMenu = () => {
 
     mobileMenu.classList.toggle("hide");
     fade.classList.toggle("hide");
-    mobileButton.classList.toggle("navbar__mobile-button--close");
+    mobileButton.classList.toggle("header-navbar__mobile-button--close");
 }
 
 // Events

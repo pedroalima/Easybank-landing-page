@@ -41,7 +41,7 @@ Os usuários devem ser capazes de:
   -->
 </html>
 
-## Resultado: [Veja como ficou!](https://todo-list-pedroalima.vercel.app/)
+## Resultado: [Veja como ficou!](https://easybank-landing-page-pedroalima.vercel.app/)
 
 ## Minha caminhada
 
