@@ -61,8 +61,7 @@ Os usuários devem ser capazes de:
 - [x] Seção ultimos artigos
 
 5º dia
-- [ ] rodapé
-- [ ] Layout desktop
+- [x] rodapé
 
 6º dia
 - [ ] Layout desktop
@@ -97,7 +96,7 @@ JavaScript
 
 <!-- - [JS - .addEventListener() na MDN](https://developer.mozilla.org/pt-BR/docs/Web/API/EventTarget/addEventListener) - Esse artigo vai te ajudar a entender como utilizar o método de instância. -->
 
-- [O desafio da Frontend Mentor](https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW) - Neste link você encontrará o desafio solucionado aqui.
+- [O desafio da Frontend Mentor](https://www.frontendmentor.io/challenges/easybank-landing-page-WaUhkoDN) - Neste link você encontrará o desafio solucionado aqui.
 
 ## Autor
 
