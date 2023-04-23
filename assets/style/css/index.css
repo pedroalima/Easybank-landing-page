@@ -186,4 +186,42 @@ body button {
   line-height: 1.1rem;
 }
 
+.footer {
+  background: hsl(233, 26%, 24%);
+  padding: 2.5rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer-high {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.8rem;
+}
+.footer-high__icon-container {
+  display: flex;
+  gap: 1.2rem;
+}
+.footer-middle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem;
+}
+.footer-middle a {
+  text-decoration: none;
+  color: hsl(0, 0%, 97.5%);
+}
+.footer-bottom {
+  text-align: center;
+}
+.footer-bottom p {
+  font-size: 0.8rem;
+  color: hsl(233, 8%, 62%);
+  margin: 2rem 0 0;
+}
+
 /*# sourceMappingURL=index.css.map */

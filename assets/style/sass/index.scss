@@ -6,6 +6,7 @@ $secundary-font-color: hsl(233, 8%, 62%);
 $button-font-color: rgba(243, 244, 246, 0.95);
 $gradient: linear-gradient(90deg, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
 $gradient-fade: linear-gradient(rgba(52, 52, 92, 1), rgba(25, 25, 46, 0.1));
+$active-status: hsl(136, 65%, 51%);
 $section-background: hsl(0, 0%, 95%);
 $body-background: hsl(0, 0%, 97.5%);
 $box-background: hsl(0, 0%, 100%);
@@ -231,6 +232,50 @@ body {
                     line-height: 1.1rem;
                 }
             }
+        }
+    }
+}
+
+.footer {
+    background: $primary-font-color;
+    padding: 2.5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    &-high {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.8rem;
+
+        &__icon-container {
+            display: flex;
+            gap: 1.2rem;
+        }
+    }
+
+    &-middle {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin: 2rem;
+
+        a {
+            text-decoration: none;
+            color: $body-background;
+        }
+    }
+
+    &-bottom {
+        text-align: center;
+
+        p {
+            font-size: 0.8rem;
+            color: $secundary-font-color;
+            margin: 2rem 0 0;
         }
     }
 }
