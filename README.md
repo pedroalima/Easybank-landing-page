@@ -29,11 +29,11 @@ Os usuários devem ser capazes de:
   <h4>Progresso atual</h4>
   <img src="./assets/img/menu.png" width="300px">
   <img src="./assets/img/progresso.png" width="300px">
+  <img src="./assets/img/" width="920px">
   <!-- 
   <h4>Layout mobile tema claro</h4>
   <img src="./assets/img/" width="300px">
-  <h4>Layout desktop tema padrão</h4>
-  <img src="./assets/img/" width="920px">
+  
   <h4>Layout desktop tema claro</h4>
   <img src="./assets/img/" width="920px">
   <h1>Testando funcionalidades</h1>
@@ -64,10 +64,15 @@ Os usuários devem ser capazes de:
 - [x] rodapé
 
 6º dia
-- [ ] Layout desktop
+- [X] Layout desktop
+  * Barra de navegação
+  * Seção principal
 
 7º dia
-- [ ] Estados de foco
+- [] Layout desktop
+  * Seção vantagens
+  * Seção ultimos artigos
+  * rodapé
 
 ### Propriedades
 

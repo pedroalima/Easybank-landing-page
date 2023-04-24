@@ -3,10 +3,12 @@
 $main-font: 'Public Sans', sans-serif;
 $primary-font-color: hsl(233, 26%, 24%);
 $secundary-font-color: hsl(233, 8%, 62%);
-$button-font-color: rgba(243, 244, 246, 0.95);
+$button-font-color: rgba(255, 255, 255, 0.9);
 $gradient: linear-gradient(90deg, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+$gradient-active-status: linear-gradient(90deg, hsla(136, 45%, 58%, 0.6), hsl(192, 70%, 51%, 0.6));
 $gradient-fade: linear-gradient(rgba(52, 52, 92, 1), rgba(25, 25, 46, 0.1));
 $active-status: hsl(136, 65%, 51%);
+$active-status-nav: hsl(233, 26%, 24%);
 $section-background: hsl(0, 0%, 95%);
 $body-background: hsl(0, 0%, 97.5%);
 $box-background: hsl(0, 0%, 100%);
@@ -17,23 +19,15 @@ $box-background: hsl(0, 0%, 100%);
 
 body {
     font-family: $main-font;
-    font-size: 18px;
     background: $body-background;
     z-index: 0;
-
-    h2 {
-        font-size: 2rem;
-        margin: 0 2rem;
-        color: $primary-font-color;
-        line-height: 2.3rem;
-    }
 
     button {
         padding: 0.9rem 2.2rem;
         border-radius: 25px;
         border: none;
         background: $gradient;
-        font-size: 0.8rem;
+        font-size: 15px;
         color: $button-font-color;
         font-weight: 700;
         letter-spacing: 0.05rem;
@@ -117,37 +111,62 @@ body {
     display: none;
 }
 
-// Start main
+
 .main {
 
-    // Initial section
     .initial {
         color: $primary-font-color;
         text-align: center;
-        padding-bottom: 5rem;
-    
-        &__banner {
-            width: 100%;
-            height: 56vh;
-            background-image:
-                url("/assets/img/image-mockups.png"),
-                url("/assets/img/bg-intro-mobile.svg");
-            background-repeat: no-repeat;
-            background-size: 90%, cover;
-            background-position: center, left top;
-            background-position-y: -21.5vh, -12.5vh;
-        }
+        width: 100%;
         
-        &__title {
-            font-size: 2.3rem;
-            line-height: 2.9rem;
+        .initial-container-banner {
+            width: 100%;
+            height: 55vh;
+
+            .initial__banner {
+                width: 100%;
+                height: 100%;
+                position: relative;
+                background-image: url("/assets/img/bg-intro-mobile.svg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: left top;
+                background-position-y: -11vh;
+                overflow: hidden;
+
+                img {
+                    width: 95%;
+                    position: absolute;
+                    top: -135px;
+                    left: 50%;
+                    transform: translate(-50%, 0);
+                }
+            }
         }
-    
-        &__description {
-            font-size: 0.9rem;
-            color: $secundary-font-color;
-            line-height: 1.5rem;
-            margin: 1rem 1rem 2rem;
+
+        .initial-content-container {
+            padding: 1rem 1.4rem 5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem;
+
+            .initial__title {
+                padding: 0 6vw;
+                color: $primary-font-color;
+                font-size: 38px;
+                line-height: 2.9rem;
+            }
+        
+            .initial__description {
+                font-size: 15px;
+                color: $secundary-font-color;
+                line-height: 1.5rem;
+            }
+
+            .initial__button {
+                margin-top: 1rem;
+            }
         }
     }
 
@@ -158,7 +177,7 @@ body {
         padding: 3rem 0;
     
         &__description {
-            font-size: 0.9rem;
+            font-size: 15px;
             margin: 1.5rem 1.2rem 2.5rem;
             color: $secundary-font-color;
             line-height: 1.5rem;
@@ -178,7 +197,7 @@ body {
             }
     
             &__description {
-                font-size: 0.9rem;
+                font-size: 15px;
                 margin: 0 1.2rem;
                 color: $secundary-font-color;
                 line-height: 1.5rem;
@@ -192,6 +211,8 @@ body {
         padding: 4rem 0;
 
         &__title {
+            font-size: 32px;
+            color: $primary-font-color;
             text-align: center;
             margin-bottom: 2rem;
         }
@@ -215,19 +236,19 @@ body {
                 gap: 0.6rem;
 
                 &__autor {
-                    font-size: 0.6rem;
+                    font-size: 10px;
                     color: $secundary-font-color;
                 }
 
                 &__title {
-                    font-size: 1rem;
+                    font-size: 16px;
                     color: $primary-font-color;
                     line-height: 1.2rem;
                     text-decoration: none;
                 }
 
                 &__description {
-                    font-size: 0.8rem;
+                    font-size: 12px;
                     color: $secundary-font-color;
                     line-height: 1.1rem;
                 }
@@ -273,10 +294,126 @@ body {
         text-align: center;
 
         p {
-            font-size: 0.8rem;
+            font-size: 14px;
             color: $secundary-font-color;
             margin: 2rem 0 0;
         }
     }
 }
 
+@media screen and (min-width: 1360px) {
+    body {
+        font-size: 16px;
+    
+        button {
+            letter-spacing: 0;
+        }
+    }
+
+    .header {
+        background: $box-background;
+        z-index: 1;
+    
+        &-navbar {
+            padding: 0 10rem;
+        
+            &__desktop {
+                display: flex;
+                gap: 2rem;
+
+                a {
+                    color: $secundary-font-color;
+                    text-decoration: none;
+                    border-bottom: 4px solid white;
+                    padding: 1.6rem 0;
+
+                    &:hover {
+                        color: $active-status-nav;
+                        border-bottom: 4px solid;
+                        border-image: $gradient 1;
+                    }
+                }
+            }
+        
+            &__desktop-button {
+                display: block;
+                
+                &:hover {
+                    background: $gradient-active-status;
+                }
+            }
+        
+            &__mobile-button {
+                display: none;
+            }
+        }
+    }
+
+    .main {
+
+        // Initial section
+        .initial {
+            width: 100%;
+            height: 90vh;
+            color: $primary-font-color;
+            padding-bottom: 0;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 1fr 1fr 1fr;
+
+            .initial-container-banner {
+                grid-column: 2/3;
+                grid-row: 1/4;
+                height: 100%;
+
+                .initial__banner {
+                    width: 100%;
+                    height: 100%;
+                    background-image: url("/assets/img/bg-intro-desktop.svg");
+                    background-repeat: no-repeat;
+                    background-size: 180%;
+                    background-position: none;
+                    background-position-y: -39vh;
+                    background-position-x: -5vw;
+                    overflow: visible;
+
+                    img {
+                        width: 100%;
+                        position: absolute;
+                        top: -110px;
+                        left: 67%;
+                        transform: translate(-50%, 0);
+                    }
+                }
+            }
+            
+            .initial-content-container {
+                grid-column: 1/2;
+                grid-row: 2/3;
+                padding: 0 7vw 0 10vw;
+                align-items: flex-start;
+                text-align: start;
+
+                .initial__title {
+                    font-size: 50px;
+                    line-height: 4rem;
+                    padding: 0;
+                }
+            
+                .initial__description {
+                    font-size: 18px;
+                    color: $secundary-font-color;
+                    line-height: 1.5rem;
+                }
+
+                .initial__button:hover {
+                    background: $gradient-active-status;
+                }
+            }
+        }
+
+
+
+
+    }
+}
