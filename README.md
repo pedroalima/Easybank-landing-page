@@ -29,7 +29,6 @@ Os usuários devem ser capazes de:
   <h4>Progresso atual</h4>
   <img src="./assets/img/menu.png" width="300px">
   <img src="./assets/img/progresso.png" width="300px">
-  <img src="./assets/img/" width="920px">
   <!-- 
   <h4>Layout mobile tema claro</h4>
   <img src="./assets/img/" width="300px">
