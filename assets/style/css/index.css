@@ -24,6 +24,7 @@ body button {
 }
 .header-navbar {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 1.2rem 1rem;
@@ -49,14 +50,14 @@ body button {
   background-image: url("/assets/img/icon-close.svg");
 }
 .header-mobile__menu {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, 0);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
   width: 88%;
   margin: 1.5rem 0;
   padding: 2rem;
@@ -113,10 +114,11 @@ body button {
   transform: translate(-50%, 0);
 }
 .main .initial .initial-content-container {
-  padding: 1rem 1.4rem 5rem;
   display: flex;
   flex-direction: column;
+  justify-content: none;
   align-items: center;
+  padding: 1rem 1.4rem 5rem;
   gap: 1rem;
 }
 .main .initial .initial-content-container .initial__title {
@@ -134,16 +136,20 @@ body button {
   margin-top: 1rem;
 }
 .main .benefits {
-  background: hsl(0, 0%, 95%);
-  text-align: center;
   display: flex;
   flex-direction: column;
+  justify-content: none;
+  align-items: none;
+  text-align: center;
+  background: hsl(210, 29%, 96%);
   gap: 3rem;
   padding: 4rem 1.3rem;
 }
 .main .benefits__content-container {
   display: flex;
   flex-direction: column;
+  justify-content: none;
+  align-items: none;
   gap: 1rem;
 }
 .main .benefits__content-container .benefits__title {
@@ -215,10 +221,11 @@ body button {
   height: 35vh;
 }
 .main .articles__box-container .articles-box-sub {
-  padding: 2rem 2rem 3rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: none;
+  padding: 2rem 2rem 3rem;
   gap: 0.6rem;
 }
 .main .articles__box-container .articles-box-sub__autor {
@@ -248,6 +255,7 @@ body button {
 .footer-first {
   display: flex;
   flex-direction: column;
+  justify-content: none;
   align-items: center;
   gap: 1.8rem;
 }
@@ -277,6 +285,7 @@ body button {
 .footer-middle {
   display: flex;
   flex-direction: column;
+  justify-content: none;
   align-items: center;
   gap: 1rem;
   margin: 2rem;
@@ -361,10 +370,13 @@ body button {
     left: 67%;
   }
   .main .initial .initial-content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: none;
+    align-items: flex-start;
     grid-column: 1/2;
     grid-row: 2/3;
     padding: 0 7vw 0 10vw;
-    align-items: flex-start;
     text-align: start;
   }
   .main .initial .initial-content-container .initial__title {
@@ -396,11 +408,15 @@ body button {
     line-height: 1.8rem;
   }
   .main .benefits__box-contanier {
+    display: flex;
     flex-direction: row;
-    align-items: start;
     justify-content: space-between;
+    align-items: flex-start;
   }
   .main .benefits__box-contanier .benefits__box-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: none;
     align-items: flex-start;
     gap: 2rem;
   }
@@ -411,9 +427,11 @@ body button {
     font-size: 15px;
   }
   .main .articles {
-    padding: 14vh 11vw;
     display: flex;
     flex-direction: column;
+    justify-content: none;
+    align-items: none;
+    padding: 14vh 11vw;
     gap: 3rem;
   }
   .main .articles__title-container .articles__title {
@@ -423,6 +441,7 @@ body button {
   }
   .main .articles__box-container {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
     gap: 1.5rem;
@@ -444,15 +463,16 @@ body button {
     font-size: 13px;
   }
   .footer {
-    padding: 3rem 0;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    padding: 3rem 0;
   }
   .footer-first {
     display: flex;
     flex-direction: column;
+    justify-content: none;
     align-items: flex-start;
     gap: 3rem;
   }
@@ -463,14 +483,14 @@ body button {
   .footer-middle {
     display: flex;
     flex-direction: column;
+    justify-content: none;
     align-items: flex-start;
     flex-wrap: wrap;
     row-gap: 1rem;
-    column-gap: 4rem;
     margin: 0rem;
     height: 12vh;
-    width: 30vw;
-    margin-right: 7vw;
+    width: 25vw;
+    margin-right: 9vw;
   }
   .footer-middle a:hover {
     color: hsl(136, 65%, 51%);

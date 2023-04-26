@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
 
+// Variables
+    // Fonts
 $main-font: 'Public Sans', sans-serif;
+
+    // Colors
 $primary-font-color: hsl(233, 26%, 24%);
 $secundary-font-color: hsl(233, 8%, 62%);
 $button-font-color: rgba(255, 255, 255, 0.9);
@@ -9,9 +13,17 @@ $gradient-active-status: linear-gradient(90deg, hsla(136, 45%, 58%, 0.6), hsl(19
 $gradient-fade: linear-gradient(rgba(52, 52, 92, 1), rgba(25, 25, 46, 0.1));
 $active-status: hsl(136, 65%, 51%);
 $active-status-nav: hsl(233, 26%, 24%);
-$section-background: hsl(0, 0%, 95%);
+$section-background: hsl(210, 29%, 96%);
 $body-background: hsl(0, 0%, 97.5%);
 $box-background: hsl(0, 0%, 100%);
+
+// Mixins
+@mixin flexbox($display, $direction, $justify, $align) {
+    display: $display;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
 
 * {
     box-sizing: border-box;
@@ -34,14 +46,11 @@ body {
     }
 }
 
-// Start header
 .header {
     position: relative;
 
     &-navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        @include flexbox(flex, row, space-between, center);
         padding: 1.2rem 1rem;
     
         &__logo {
@@ -71,14 +80,11 @@ body {
     }
     
     &-mobile__menu {
+        @include flexbox(flex, column, center, center);
+        gap: 1.5rem;
         position: absolute;
         left: 50%;
         transform: translate(-50%, 0);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 1.5rem;
         width: 88%;
         margin: 1.5rem 0;
         padding: 2rem;
@@ -97,7 +103,6 @@ body {
         display: none;
     }
 }
-// End header
 
 .fade {
     width: 100%;
@@ -110,7 +115,6 @@ body {
 .hide {
     display: none;
 }
-
 
 .main {
 
@@ -145,10 +149,8 @@ body {
         }
 
         .initial-content-container {
+            @include flexbox(flex, column, none, center);
             padding: 1rem 1.4rem 5rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
             gap: 1rem;
 
             .initial__title {
@@ -171,16 +173,14 @@ body {
     }
 
     .benefits {
-        background: $section-background;
+        @include flexbox(flex, column, none, none);
         text-align: center;
-        display: flex;
-        flex-direction: column;
+        background: $section-background;
         gap: 3rem;
         padding: 4rem 1.3rem;
 
         &__content-container {
-            display: flex;
-            flex-direction: column;
+            @include flexbox(flex, column, none, none);
             gap: 1rem;
 
             .benefits__title {
@@ -198,17 +198,11 @@ body {
         }
         
         &__box-contanier {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
+            @include flexbox(flex, column, space-around, center);
             gap: 3rem;
 
             .benefits__box-item {
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around;
-                align-items: center;
+                @include flexbox(flex, column, space-around, center);
                 gap: 1.3rem;
 
                 &__title {
@@ -269,10 +263,8 @@ body {
                 }
 
                 &-sub {
+                    @include flexbox(flex, column, space-between, none);
                     padding: 2rem 2rem 3rem;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
                     gap: 0.6rem;
 
                     &__autor {
@@ -301,15 +293,10 @@ body {
 .footer {
     background: $primary-font-color;
     padding: 2.5rem 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    @include flexbox(flex, column, space-between, center);
 
     &-first {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include flexbox(flex, column, none, center);
         gap: 1.8rem;
 
         &__icon-container {
@@ -348,9 +335,7 @@ body {
     }
 
     &-middle {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include flexbox(flex, column, none, center);
         gap: 1rem;
         margin: 2rem;
 
@@ -452,10 +437,10 @@ body {
             }
             
             .initial-content-container {
+                @include flexbox(flex, column, none, flex-start);
                 grid-column: 1/2;
                 grid-row: 2/3;
                 padding: 0 7vw 0 10vw;
-                align-items: flex-start;
                 text-align: start;
 
                 .initial__title {
@@ -495,12 +480,10 @@ body {
             }
             
             &__box-contanier {
-                flex-direction: row;
-                align-items: start;
-                justify-content: space-between;
+                @include flexbox(flex, row, space-between, flex-start);
 
                 .benefits__box-item {
-                    align-items: flex-start;
+                    @include flexbox(flex, column, none, flex-start);
                     gap: 2rem;
             
                     &__title {
@@ -515,9 +498,8 @@ body {
         }
 
         .articles {
+            @include flexbox(flex, column, none, none);
             padding: 14vh 11vw;
-            display: flex;
-            flex-direction: column;
             gap: 3rem;
             
             &__title-container {
@@ -529,9 +511,7 @@ body {
             }
             
             &__box-container {
-                display: flex;
-                justify-content: space-between;
-                align-items: flex-start;
+                @include flexbox(flex, row, space-between, flex-start);
                 gap: 1.5rem;
 
                 .articles-box {
@@ -561,16 +541,11 @@ body {
     }
 
     .footer {
+        @include flexbox(flex, row, space-around, center);
         padding: 3rem 0;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-    
+
         &-first {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
+            @include flexbox(flex, column, none, flex-start);
             gap: 3rem;
     
             &__icon-container {
@@ -580,16 +555,13 @@ body {
         }
     
         &-middle {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
+            @include flexbox(flex, column, none, flex-start);
             flex-wrap: wrap;
             row-gap: 1rem;
-            column-gap: 4rem;
             margin: 0rem;
             height: 12vh;
-            width: 30vw;
-            margin-right: 7vw;
+            width: 25vw;
+            margin-right: 9vw;
     
             a:hover {
                 color: $active-status;
@@ -611,4 +583,3 @@ body {
         }
     }
 }
-
