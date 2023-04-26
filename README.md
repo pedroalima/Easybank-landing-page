@@ -26,18 +26,12 @@ Os usuários devem ser capazes de:
 ### Screenshots
 
 <html>
-  <h4>Progresso atual</h4>
+  <h4>Menu mobile</h4>
   <img src="./assets/img/menu.png" width="300px">
-  <img src="./assets/img/progresso.png" width="300px">
-  <!-- 
-  <h4>Layout mobile tema claro</h4>
-  <img src="./assets/img/" width="300px">
-  
-  <h4>Layout desktop tema claro</h4>
-  <img src="./assets/img/" width="920px">
-  <h1>Testando funcionalidades</h1>
-  <img src="./assets/img/" width="920px"> 
-  -->
+  <h4>Layout mobile</h4>
+  <img src="./assets/img/mobile-layout-1.png" width="300px"> <img src="./assets/img/mobile-layout-2.png" width="300px"> <img src="./assets/img/mobile-layout-3.png" width="300px">
+  <h4>Layout desktop </h4>
+  <img src="./assets/img/desktop-layout.png" width="920px">
 </html>
 
 ## Resultado: [Veja como ficou!](https://easybank-landing-page-pedroalima.vercel.app/)
@@ -68,10 +62,11 @@ Os usuários devem ser capazes de:
   * Seção principal
 
 7º dia
-- [] Layout desktop
+- [x] Layout desktop
   * Seção vantagens
   * Seção ultimos artigos
   * rodapé
+- [x] Refatoração
 
 ### Propriedades
 
@@ -81,24 +76,43 @@ Os usuários devem ser capazes de:
 - JavaScript
 
 ### Meu aprendizado
-...
+O objetivo do projeto foi pôr em prática meus conhecimentos de SASS, consegui solidificar os conceitos de mixins, variáveis, nesting e seletor "&", que são essenciais para melhorar a produtividade no desenvolvimento da folha de estilo.
 
 Trechos de destaque:
 
-HTML
-```html
+SCSS
+```scss
 ...
+// Variables
+$active-status: hsl(136, 65%, 51%);
+
+// Mixins
+@mixin flexbox($display, $direction, $justify, $align) {
+    display: $display;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
 ...
-```
-JavaScript
-```javascript
-...
+// Utilization
+&-middle {
+  @include flexbox(flex, column, none, flex-start);
+  flex-wrap: wrap;
+  row-gap: 1rem;
+  height: 12vh;
+  width: 25vw;
+  margin-right: 9vw;
+  
+  a:hover {
+    color: $active-status;
+  }
+}
 ...
 ```
 
 ### Recursos
 
-<!-- - [JS - .addEventListener() na MDN](https://developer.mozilla.org/pt-BR/docs/Web/API/EventTarget/addEventListener) - Esse artigo vai te ajudar a entender como utilizar o método de instância. -->
+- [SASS - Documentation](https://sass-lang.com/documentation/) - Nesse site você saberá tudo sobre o mundo SASS.
 
 - [O desafio da Frontend Mentor](https://www.frontendmentor.io/challenges/easybank-landing-page-WaUhkoDN) - Neste link você encontrará o desafio solucionado aqui.
 
